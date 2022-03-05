@@ -1,0 +1,257 @@
+<?php
+session_start();
+include("connect/connectdb.php");
+?>
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <link rel="stylesheet" href="css/backed_purchaseSendback.css">
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+
+</head>
+
+
+<body>
+
+
+    <div class="fullscreen">
+        <div class="sidenav">
+            <?php
+            $user_username = $_SESSION['user_username'];
+            include('connect/connectdb.php');
+            $query = "SELECT * FROM user WHERE user_username='$user_username'  ";
+            $result = mysqli_query($conn, $query);
+            while ($row = mysqli_fetch_array($result)) {
+            ?>
+                <div class="row" id="row_profile">
+                    <div class="col-md-3"><img style="width: 70px;height:70px;border-radius:50%;border:3px solid #80ED99" class="img_profile" src="<?php echo $row['user_img'] ?>" width="70" alt=""></div>
+                    <div class="col-md-9">
+                        <h4 style="margin-top: 15px;"><?php echo $row['user_username'] ?></h4>
+                        <p class="mailji" style="margin-top: -10px;margin-left: 10px;"><?php echo $row['user_email'] ?></p>
+                    </div>
+                </div><?php } ?>
+                <a class="menu" href="backed_dash.php"><i class="bi bi-graph-up"></i><span class="dpn"> Dashboard</span></a>
+            <a class="menu" href="backed_product.php"><i class="bi bi-ui-checks-grid"></i> <span class="dpn">จัดการข้อมูล</span></a>
+            <a class="menu" href="backed_pos.php"><i class="bi bi-basket-fill"></i><span class="dpn"> ขายสินค้า (POS)</span></a>
+            <a class="menu" href="backed_purchaseorder.php"><i class="bi bi-clipboard-data"></i> <span class="dpn">ข้อมูลการสั่งซื้อสินค้า</span></a>
+            <a class="menu" href="backed_notpaid.php"><i class="bi bi-cash-coin"></i><span class="dpn"> ยังไม่ชำระเงิน</span></a>
+            <a class="menu" href="backed_reviews.php"><i class="bi bi-chat-square-text-fill"></i><span class="dpn"> รีวิวร้าน</span></a>
+            <a class="menu" href="backed_customer.php"><i class="bi bi-people-fill"></i><span class="dpn"> ลูกค้า</span></a>
+            <a class="menu-active" href="backed_purchaseSendback.php"><i class="bi bi-people-fill"></i><span class="dpn"> สนทนา</span></a>
+            <a class="menu" href="backed_store.php"><i class="bi bi-shop-window"></i><span class="dpn"> ตกแต่งร้านค้า</span></a>
+            <a class="btn_logout" onclick="window.location='./logout.php'" href="#"> <span>ออกจากระบบ</span></a>
+        </div>
+
+        <div class="center">
+
+            <a href="./backed_purchaseorder.php" class="btn-back"><i class="bi bi-arrow-left"></i> กลับไปหน้าข้อมูลการสั่งซื้อ</a>
+            <?php
+            $purchase_id = $_GET['purchase_id'];
+            $sqlPurchase = "SELECT * FROM purchaseorder 
+          INNER JOIN address_tbl ON purchaseorder.address_id = address_tbl.address_id
+          INNER JOIN user ON address_tbl.user_username = user.user_username WHERE purchaseorder.purchase_id = '$purchase_id'";
+            $resultPurchase = mysqli_query($conn, $sqlPurchase);
+            $rowPurchase = mysqli_fetch_assoc($resultPurchase);
+            $queryProvince = "SELECT * FROM provinces ";
+            $resultProvince = mysqli_query($conn, $queryProvince);
+            $queryAmphures = "SELECT * FROM amphures ";
+            $resultAmphures = mysqli_query($conn, $queryAmphures);
+            $queryDistricts = "SELECT * FROM districts ";
+            $resultDistricts = mysqli_query($conn, $queryDistricts);
+
+
+            if (($rowPurchase['purchase_status'] == 'สั่งซื้อแล้วรอการอนุมัติ') || ($rowPurchase['purchase_status'] == 'อนุมัติออเดอร์แล้ว')) { ?>
+
+                <div class="div-bigbox">
+                    <div class="divbox1">
+                        <img class="img-slip img-fluid" src="<?php echo $rowPurchase['payment_state']; ?>" alt="">
+                    </div>
+                    <div class="divbox2">
+                        <h2 class="title1">ข้อมูลการสั่งซื้อ หมายเลขคำสั่งซื้อ <?php echo $rowPurchase['purchase_id']; ?></h2>
+                        <div class="divbox3">
+                            <p class="text-des1">ชื่อลูกค้า </p>
+                            <p class="text-des1 text-right"><?php echo $rowPurchase['user_fname'] . " " . $rowPurchase['user_lname']; ?></p>
+
+                            <p class="text-des1">ราคารวมทั้งหมด </p>
+                            <p class="text-des1 text-right"><?php echo $rowPurchase['purchase_price']; ?> บาท</p>
+                            <p class="text-des1 text-color">ราคาที่ลูกค้าชำระ (<?php
+                                                                                if ($rowPurchase['payment_status'] == '1') {
+                                                                                    echo "จ่ายเต็ม";
+                                                                                } elseif ($rowPurchase['payment_status'] == '2') {
+                                                                                    echo "50%";
+                                                                                } else {
+                                                                                    echo "อื่นๆ";
+                                                                                }
+                                                                                ?>)</p>
+                            <p class="text-des1 text-color text-right"><?php
+                                                                        if ($rowPurchase['payment_status'] == '1') {
+                                                                            echo $rowPurchase['purchase_price'];
+                                                                        } elseif ($rowPurchase['payment_status'] == '2') {
+                                                                            echo $rowPurchase['purchase_price'] / 2;
+                                                                        } else {
+                                                                            echo "อื่นๆ";
+                                                                        }
+                                                                        ?> บาท</p>
+
+                            <p class="text-des1">ประเภทการรับสินค้า </p>
+                            <p class="text-des1 text-right"><?php
+                                                            if ($rowPurchase['deliver_type'] == 'take') {
+                                                                echo "รับสินค้าเอง";
+                                                            } elseif ($rowPurchase['deliver_type'] == 'delivery') {
+                                                                echo "ทางร้านจัดส่ง";
+                                                            } else {
+                                                                echo "อื่นๆ";
+                                                            }
+                                                            ?></p>
+                        </div>
+                        <?php
+                        if ($rowPurchase['deliver_type'] == 'delivery') { ?>
+                            <div class="col-address1">
+                                <p class="text-des1">ที่อยู่จัดส่ง</p>
+                                <p class="p-name">
+                                    <?php echo $rowPurchase["user_fname"] . " " . $rowPurchase["user_lname"] . " " . $rowPurchase["user_tel"] . " " . $rowPurchase["address_descript"]
+                                        . " " ?>
+                                    <?php while ($rowDistricts = mysqli_fetch_assoc($resultDistricts)) {
+                                        if ($rowPurchase['sub_district'] == $rowDistricts['id']) {
+                                            echo "ต." . $rowDistricts["name_th"];
+                                        }
+                                    } ?>
+                                    <?php while ($rowAmphures = mysqli_fetch_assoc($resultAmphures)) {
+                                        if ($rowPurchase['district'] == $rowAmphures['id']) {
+                                            echo " อ." . $rowAmphures["name_th"];
+                                        }
+                                    } ?><?php while ($rowProvinces = mysqli_fetch_assoc($resultProvince)) {
+                                            if ($rowPurchase['province'] == $rowProvinces['id']) {
+                                                echo " จ." . $rowProvinces["name_th"] . " " . $rowPurchase["postcode"];
+                                            }
+                                        } ?>
+                                </p>
+                            </div>
+                        <?php } else { ?>
+                            <div class="col-address2">
+                                <p class="text-des1">กำหนดการรับสินค้า</p>
+                                <p class="p-name">วันที่ <?php echo $rowPurchase['date_pickup'] ?> เวลา <?php echo $rowPurchase['time_pickup'] ?></p>
+                            </div>
+                        <?php } ?>
+                        <div class="divform">
+                            <form method="POST" action="./connect/con_edit_purchase_sendback.php?purchase_id=<?php echo $rowPurchase["purchase_id"] ?>">
+                                <p class="text-des1">กรอกรายละเอียดการแจ้งกลับ</p>
+                                <select class="select01" name="sendback_type" id="sendback_type">
+                                    <option hidden value="0">เลือกประเภทการแจ้ง</option>
+                                    <?php $querySendback = "SELECT * FROM sendbacktype WHERE sendback_type !=0 ";
+                                    $resulSendback = mysqli_query($conn, $querySendback);
+                                    while ($rowSendback = mysqli_fetch_array($resulSendback)) { ?>
+                                        <option  value="<?php echo $rowSendback['sendback_type'] ?>"><?php echo $rowSendback['descript_type'] ?></option>
+                                    <?php } ?>
+                                </select>
+                                <script>
+                                    $(document).ready(function() {
+                                        $('#select-track').hide();
+                                        $("#sendback_type").change(function() {
+                                            var value = $("#sendback_type option:selected").val();
+                                            if (value == "2") {
+                                                $('#select-track').show();
+                                            } else {
+                                                $('#select-track').hide();
+                                            }
+                                        });
+                                    });
+                                </script>
+                                <select class="select01" name="select_track" id="select-track">
+                                    <option hidden value="0">เลือกบริษัทขนส่ง</option>
+                                    <?php $queryShipping = "SELECT * FROM shippingcompany WHERE company_status =1 ";
+                                    $resulShipping = mysqli_query($conn, $queryShipping);
+                                    while ($rowShipping = mysqli_fetch_array($resulShipping)) { ?>
+                                        <option  value="<?php echo $rowShipping['company_id'] ?>"><?php echo $rowShipping['company_name'] ?></option>
+                                    <?php } ?>
+                                </select>
+                                <br>
+                                <textarea required class="form-descript" rows="5" name="descript" id=""></textarea>
+                                <br><input class="btn-submit" type="submit" value="ส่งข้อมูล">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            <?php } else { ?>
+
+                <div class="div-bigbox2">
+                    <section class="admin">
+                        <h5 class="text-from">แจ้งกลับจากทางร้าน</h5>
+                        <?php
+                        $querySendback1 = "SELECT * FROM sendback WHERE purchase_id = $purchase_id AND  sendback_status = 0 ";
+                        $resultSendback1 = mysqli_query($conn, $querySendback1);
+                        while ($rowSendback1 = mysqli_fetch_array($resultSendback1)) {
+                        ?>
+                            <p class="old-slip">คำอธิบาย</p>
+                            <textarea class="textarea-descript"><?php echo $rowSendback1['descript'] ?></textarea>
+                            <p class="old-slip">หลักฐานการชำระเงินลูกค้า</p>
+                            <img class="img-old" src="<?php echo $rowSendback1['slip_before'] ?>" alt="old-slip">
+                        <?php } ?>
+                    </section>
+                    <section class="customer">
+                        <h5 class="text-from">แจ้งกลับจาก <?php echo $rowPurchase['user_username'] ?></h5>
+
+                        <?php
+                        $querySendback2 = "SELECT * FROM sendback WHERE purchase_id = $purchase_id AND sendback_status = 1 ";
+                        $resultSendback2 = mysqli_query($conn, $querySendback2);
+                        $resultSendbackNum = mysqli_num_rows($resultSendback2);
+                        if ($resultSendbackNum == 0) { ?>
+                            <p class="no-fead"> ยังไม่มีการตอบกลับ</p>
+                            <div class="btnconfirm2">
+                                <a href="./connect/con_cancel_order.php?purchase_id=<?php echo $rowPurchase['purchase_id'] ?>" class="cancelorder">ยกเลิกออเดอร์</a>
+
+                                <?php } else {
+                                while ($rowSendback2 = mysqli_fetch_array($resultSendback2)) { ?>
+
+
+                                    <p class="old-slip">หลักฐานการชำระเงินใหม่</p>
+                                    <img class="img-old" src="<?php echo $rowSendback2['slip_before'] ?>" alt="old-slip">
+
+
+                                <?php } ?>
+                                <div class="btnconfirm">
+                                    <a href="./connect/con_cancel_order.php?purchase_id=<?php echo $rowPurchase['purchase_id'] ?>" class="cancelorder">ยกเลิกออเดอร์</a>
+                                    <a href="./connect/con_cancel_order.php?purchase_id=<?php echo $rowPurchase['purchase_id'] ?>" class="confirmorder">ยอดชำระถูกต้อง</a>
+                                </div>
+                            <?php } ?>
+                    </section>
+
+
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+
+    <?php include("cnd.php") ?>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</html>

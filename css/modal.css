@@ -1,0 +1,18 @@
+.regis{
+    margin-bottom: 10px;
+}
+.modal{
+    z-index: 100000;
+}
+.modal-header{
+    height: 40px;
+}
+.x{
+    margin-top: -60px !important;
+}
+.close{
+    background-color: red;
+    margin: 5px;
+    height: 30px;
+    padding: 5px !important;
+}

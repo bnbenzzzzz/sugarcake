@@ -1,0 +1,132 @@
+*{
+    font-family: 'Prompt', sans-serif;
+}
+
+.navbar{
+    padding: 0%;
+    width: 100%;
+    box-shadow: rgb(196, 192, 192) 2px 2px 10px ;  
+}
+#navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+    margin-left: 0% auto;
+}
+a{
+    color: rgb(13, 136, 145);
+}
+a:link{
+    text-decoration: none;
+    font-weight: underline; 
+}
+a:hover {
+    color: lightsalmon;
+}
+.btn_show{
+    background-color: rgb(209, 176, 67) ;
+    border: 0px;
+    box-shadow: 5px 5px 1px rgb(235, 215, 149) ;
+}
+.btn_show:hover{
+    background-color: rgb(173, 149, 71) ;
+
+}
+/* .modal_login{
+    box-shadow: 5px 5px 1px rgb(110, 180, 189);
+} */
+
+.btn_register{
+    text-decoration: none !important;
+    color: teal ;
+}
+.btn_close{
+    width: 5em !important;
+}
+.textja{
+    color: rgb(105, 68, 44);
+}
+
+.left{
+    width: 50%;
+    background-color: rgb(67, 66, 73);
+}
+.right {
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+
+  }
+#but{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0px auto;
+}
+
+
+/* จบ navbar  */
+.card{
+    margin-bottom: -2%;
+    margin-top: 2em;
+    transition: 0.5s;
+    
+}
+.card:hover{
+    box-shadow: 5px 5px 5px lightgray;
+}
+.regis{
+    margin-bottom: 5px !important;
+}
+.modal{
+    z-index: 100000;
+}
+
+.x{
+    margin-top: -10px !important;
+}
+.close{
+    border-radius: 5px;
+    border: 0px;
+    padding: 5px;
+     padding-left: 10px !important;
+    padding-right: 10px !important;
+    background-color: red;
+    margin: 5px;
+    height: 30px;
+    padding: 5px !important;
+}
+.close:hover{
+    border-radius: 5px;
+    border: 0px;
+    padding: 5px;
+   
+    background-color: rgb(207, 48, 48);
+    margin: 5px;
+    height: 30px;
+    padding: 5px !important;
+}
+.btnclose{
+    border:0px;
+    background-color: rgba(0, 0, 139, 0);
+    /* width: 2em;*/
+    height: 1em !important; 
+    color: darkgoldenrod;
+    margin-top: -0.7em;
+    font-size: 3em;
+}
+
+
+
+@media (max-width: 992px){
+    #cart, #user {
+        display: block;
+    }
+    .icon_cart, .icon_user{
+        display: none;
+    }
+    .card{
+        width: 70%;
+        margin: 0% auto;
+        margin-bottom: 2em;
+    }
+}

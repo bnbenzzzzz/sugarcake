@@ -1,0 +1,737 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css");
+
+* {
+    font-family: 'Prompt', sans-serif !important;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.row-card {
+    width: 60%;
+    padding: 10px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.text-username {
+    font-size: 2em;
+    color: #F25287;
+    letter-spacing: 2px;
+}
+
+.col-descrip p {
+    font-size: 1.3em;
+    display: inline-block;
+    color: rgb(76, 76, 77);
+    line-height: 20px;
+}
+
+.imgpro {
+    border-radius: 80%;
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    margin-top: 10%;
+    padding: 3px;
+    border: 2px solid #F25287;
+    border-right: 2px dotted #F25287;
+}
+
+.center {
+    background-color: #ffffff;
+    width: 78%;
+    margin-left: 21%;
+    border-radius: 5px;
+    margin-top: -9em;
+    height: 41em;
+    box-shadow: 5px 5px 10px rgb(236 236 236);
+    overflow-y: scroll;
+}
+
+#cover {
+    background-color: white;
+    height: 5vh;
+    padding-bottom: 20vh;
+    margin-top: 5em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(168, 168, 168, 0.2);
+}
+
+#cover2 {
+    background-color: rgb(250, 246, 248);
+    height: 30em;
+    padding-bottom: 30vh;
+    margin-top: 5em;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(109, 108, 108, 0.2);
+}
+
+.start_regis {
+    font-size: 16px;
+    color: gray;
+
+}
+.btneditprofile{
+    position: relative;
+       padding: 0 7px;
+}
+.btn_edit_profile {
+    width: 90% !important;
+    margin: right;
+    background-color: rgb(224, 177, 89);
+    border: 0px solid;
+    padding: 7px 0px;
+
+    border-radius: 10px;
+    color: white;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 1.1em;
+   position: absolute;
+    margin-top :3em;
+
+}
+
+.btn_edit_profile:hover {
+    background-color: rgb(219, 160, 50);
+    letter-spacing: 1px;
+    color: white;
+}
+
+.btn_edit {
+    width: 90% !important;
+    margin: right;
+    background-color: rgb(224, 177, 89);
+    border: 0px solid;
+    padding: 5px;
+    height: 2em;
+    border-radius: 15px;
+    color: white;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.btn_edit:hover {
+    background-color: rgb(219, 163, 59);
+    letter-spacing: 3px;
+    color: white;
+}
+
+.btn_show {
+    width: 90% !important;
+    margin: auto;
+    background-color: #105652;
+    border: 0px solid;
+    padding: 5px;
+    height: 2em;
+    border-radius: 15px;
+    color: white;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.btn_show:hover {
+    background-color: #1a7571;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.btn_logout {
+    width: 90% !important;
+    margin: auto;
+    background-color: #B91646;
+    border: 0px solid;
+    padding: 5px;
+    height: 2em;
+    border-radius: 15px;
+    color: white;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+
+.btn_logout:hover {
+    background-color: rgb(180, 80, 80);
+    color: white;
+    letter-spacing: 3px;
+}
+
+.div-btn3 {
+    margin-top: 2em !important;
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 50%;
+    margin: auto;
+}
+
+.navbar {
+    padding: 0%;
+    width: 100%;
+    box-shadow: rgb(196, 192, 192) 2px 2px 10px;
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+    margin-left: 0% auto;
+}
+
+.breadcrumb {
+    margin-top: 5%;
+    padding-left: 7%;
+    margin-bottom: 1%;
+}
+
+h2 {
+    padding-top: 1.2em;
+}
+
+#choice {
+    margin: 0 2px;
+}
+
+#btn {
+    margin-right: 2em;
+    font-weight: bold;
+}
+
+a {
+    color: rgb(13, 136, 145);
+}
+
+a:link {
+    text-decoration: none;
+    font-weight: underline;
+}
+
+a:hover {
+    color: lightsalmon;
+}
+
+table,
+tr,
+td {
+    padding-left: 2em;
+    margin-top: 2em;
+}
+
+button {
+    margin: 0.5em 1em;
+    font-weight: bold;
+}
+
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(173, 156, 106);
+
+}
+
+#cart_text {
+    color: rgb(13, 136, 145);
+}
+
+#user_text {
+    color: rgb(247, 107, 149);
+}
+
+#cart,
+#user {
+    display: none;
+}
+
+/* จบ navbar  */
+.card {
+    margin-bottom: -2%;
+    margin-top: 2em;
+    transition: 0.5s;
+
+}
+
+.card:hover {
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+.card-poin {
+    width: 60%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+
+.left {
+    box-sizing: border-box;
+    border-radius: 7px;
+    width: 60%;
+    padding: 16px;
+    background-color: rgb(228, 226, 226);
+    height: 32em;
+    margin-top: 2em;
+    margin-left: 2.5em;
+    overflow-y: scroll;
+}
+
+.right {
+    box-sizing: border-box;
+    border-radius: 7px;
+    width: 35%;
+    padding: 5px;
+    background-color: rgb(228, 226, 226);
+    height: 32em;
+    margin-top: 2em;
+    margin-left: 0.5em;
+    overflow-y: scroll;
+}
+
+/* Gologin  */
+.img-buy {
+    display: block;
+    width: 50%;
+    margin: auto;
+
+}
+
+.btn-Gologin {
+    width: 60%;
+    background-color: #fff;
+    border-radius: 10px;
+    height: 60vh;
+    margin: auto;
+    box-shadow: 2px 2px 10px rgb(247, 247, 247);
+    margin-top: 10%;
+    padding-top: 2em;
+}
+
+.text-warn {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: hotpink;
+    letter-spacing: 2px;
+}
+
+.all-btn {
+    margin-top: 1em;
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.btn-signup {
+    display: block;
+    margin: auto;
+    width: 10em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border: 0;
+    background-color: rgb(161, 115, 77);
+    border-radius: 15px;
+    letter-spacing: 2px;
+    transition: .2s;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+
+.btn-signup:hover {
+    letter-spacing: 3px;
+    color: white;
+}
+
+.btn-signin {
+    display: block;
+    margin: auto;
+    width: 10em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border: 2px solid rgb(161, 115, 77);
+    background-color: rgba(255, 78, 146, 0);
+    border-radius: 15px;
+    letter-spacing: 2px;
+    transition: .3s;
+    color: rgb(161, 115, 77);
+    text-align: center;
+    font-weight: 700;
+}
+
+.btn-signin:hover {
+    color: rgb(161, 115, 77);
+    letter-spacing: 3px;
+
+}
+
+.text-history {
+    margin-top: 2em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    display: inline-block;
+}
+
+.text-history2 {
+    margin-top: 2em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    display: inline-block;
+    float: right;
+    text-decoration: underline;
+}
+
+.content-box {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(233, 233, 233);
+}
+
+.show-rate {
+    color: #F25287;
+}
+
+.b-review {
+    color: #F25287;
+    letter-spacing: 2px;
+}
+
+.bi-star {
+    font-size: 2em;
+    margin-left: 10px;
+}
+
+.bi-star-fill {
+    font-size: 2em;
+    margin-left: 10px;
+}
+
+.div-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 95%;
+    /* border-bottom: 1px solid rgb(214, 214, 214); */
+    margin: auto;
+    padding-top: 20px;
+}
+
+.p-status1 {
+    display: inline-block;
+    text-align: left;
+    font-weight: bold;
+    color: rgb(13, 163, 93);
+}
+
+.p-status2 {
+    display: inline-block;
+    text-align: right;
+    font-weight: bold;
+    color: rgb(13, 163, 93);
+}
+
+.pd-detail {
+    /* height: 10em;
+    overflow-y: scroll; */
+    /* border-bottom: 1px solid rgb(204, 202, 202); */
+    width: 95%;
+    margin: auto;
+}
+
+.pd-detail::-webkit-scrollbar {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+}
+
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.img-pd {
+    border-radius: 10px;
+}
+
+.div-foot {
+    width: 90%;
+    margin: auto;
+    border-top: 1px solid rgb(197, 197, 197);
+}
+
+.btn-review1 {
+    width: 8em;
+    display: inline-block;
+    height: 2em;
+    margin-top: 5%;
+    margin-left: 3%;
+    border: 0px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: rgb(236, 143, 55);
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-review2 {
+    width: 8em;
+    display: inline-block;
+    height: 2em;
+    margin-top: 5%;
+    margin-left: 3%;
+    border: 0px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: rgb(216, 216, 216);
+    color: rgb(87, 87, 87);
+    border-radius: 5px;
+
+}
+
+.text-sumprice {
+    text-align: right;
+    font-weight: bold;
+    color: rgb(243, 33, 114);
+    padding: 0;
+}
+
+
+@media (max-width: 1024px) {
+    .row-card {
+        width: 80%;
+    }
+
+    #cover {
+        height: 25em;
+        padding-bottom: 0vh;
+        margin-top: 5em;
+    }
+
+    .card-poin {
+        width: 80%;
+    }
+
+    .btn_edit,
+    .btn_show,
+    .btn_logout {
+        width: 95% !important;
+        font-size: 0.8em;
+        height: 2.5em;
+    }
+
+    .modal-profile {
+        width: 150em !important;
+        margin-left: -40.5em !important;
+        height: 180em !important;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    #cart,
+    #user {
+        display: block;
+    }
+
+    .icon_cart,
+    .icon_user {
+        display: none;
+    }
+
+    .card {
+        width: 70%;
+        margin: 0% auto;
+        margin-bottom: 2em;
+    }
+
+    .btn-Gologin {
+        width: 80%;
+        background-color: #fff;
+        border-radius: 10px;
+        height: 40vh;
+        margin: auto;
+        box-shadow: 2px 2px 10px rgb(247, 247, 247);
+        margin-top: 10%;
+        padding-top: 2em;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .div-btn3 {
+        width: 70%;
+    }
+
+    .imgpro {
+        width: 150px;
+        height: 150px;
+        margin-top: 30%;
+    }
+
+    .modal-profile {
+        width: 120em !important;
+        margin-left: -34.5em !important;
+        height: 180em !important;
+    }
+
+    .btn-Gologin {
+        width: 90%;
+        height: 80vh;
+        margin-top: 10%;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .div-btn3 {
+        width: 95%;
+    }
+
+    .content-box {
+        margin-bottom: 70px;
+    }
+
+    .row-card {
+        width: 90%;
+        padding: 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .imgpro {
+        width: 200px;
+        height: 200px;
+        margin-top: 5%;
+    }
+
+    #cover {
+        height: 40em;
+        padding-bottom: 0vh;
+        margin-top: 5em;
+    }
+
+    .btn-Gologin {
+        width: 90%;
+        height: 40vh;
+        margin-top: 20%;
+    }
+
+    .all-btn {
+        margin-top: 1em;
+        width: 50%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .btn-signup {
+        width: 90%;
+        padding: 0.2em 0.5em;
+    }
+
+    .btn-signin {
+        width: 90%;
+        padding: 0.2em 0.5em;
+
+    }
+
+    .modal-profile {
+        width: 80em !important;
+        margin-left: -22em !important;
+        margin-top: -5em !important;
+        z-index: 1000000;
+    }
+
+    .text-username {
+        text-align: center;
+        margin-top: -10em;
+    }
+
+    .btn_edit,
+    .btn_show,
+    .btn_logout {
+        width: 95% !important;
+        font-size: 0.6em;
+        height: 2.5em;
+    }
+
+    .text-history,
+    .text-history2 {
+        font-size: 0.8em;
+    }
+
+    .card-poin {
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .modal-profile {
+        width: 65em !important;
+        margin-left: -18.7em !important;
+        margin-top: -5em !important;
+        z-index: 1000000;
+    }
+
+    .all-btn {
+        margin-top: 1em;
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .btn-signup {
+        width: 90%;
+        padding: 0.2em 0.5em;
+    }
+
+    .btn-signin {
+        width: 90%;
+        padding: 0.2em 0.5em;
+
+    }
+
+    .text-warn {
+        font-size: 1em;
+        margin-top: 1em;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .btn_edit,
+    .btn_show,
+    .btn_logout {
+        width: 95% !important;
+        font-size: 0.4em;
+        height: 3em;
+    }
+}

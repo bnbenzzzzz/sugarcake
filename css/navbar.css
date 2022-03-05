@@ -1,0 +1,147 @@
+*{
+    font-family: 'Prompt', sans-serif;
+}
+
+
+.navbar{
+    padding: 0%;
+    background-color: rgb(245, 239, 222) !important;
+    width: 100%;
+    height: 4em;
+    box-shadow: rgb(196, 192, 192) 2px 2px 10px ;  
+}
+#navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    margin-left: 0% auto;
+}
+.nav_menu{
+    font-weight: bold !important;
+    color: rgb(161, 115, 77) !important;
+    /* background-color: rosybrown; */
+    padding: 5px;
+    margin-left: 5px;
+    transition: 0.3s;
+    border-radius: 10px;
+    /* border: 2px solid; */
+
+}
+
+.nav_menu:hover{
+    color: rgb(255, 255, 255) !important;
+    background-color:rgb(161, 115, 77) ;
+    box-shadow: rgba(255, 255, 255, 0.562) 5px 5px 1px;
+}
+.dropdown-menu{
+    border-radius: 7px !important;
+    background-color: rgb(245, 239, 222) !important;
+    border: 0px;
+}
+div {
+    display: inline;
+}
+#cart_text{
+    color: rgb(13, 136, 145);
+}
+#user_text{
+    color: rgb(247, 107, 149);
+}
+#cart, #user, #mail {
+    display: none;
+}
+
+h1{
+    margin-top: 2em;
+    font-size: 3em;
+    font-weight: bolder;
+}
+iframe{
+    height: 25em;
+    margin: 2em 0;
+}
+tr{
+    padding-bottom: 42em;
+}
+.b{
+    font-weight: bold;
+}
+.sp{
+    padding: 0 15px;
+   
+}
+.box-noti {
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+    right: 7em;
+    margin-top: -20px;
+}
+.noti {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: red;
+    padding:5px;
+    text-align: center;
+    color: white;
+}
+.bi-cart4 {
+    font-size: 1.7em;
+    color: rgb(131, 131, 131);
+    margin-top: 2px !important;
+}
+.icon_cart {
+    display: inline-block;
+}
+.icon_user {
+    margin-top: -10px;
+    position: absolute;
+    right: 30px;
+    font-size: 1.7em;
+    color: rgb(131, 131, 131);
+}
+.icon_mail{
+    margin-top: -10px;
+    position: absolute;
+    right: 2.7em;
+    font-size: 1.7em;
+    color: rgb(131, 131, 131);
+}
+.icon_mail2{
+    margin-top: -10px;
+    position: absolute;
+    right: 2.7em;
+    font-size: 1.7em;
+    color: rgb(236, 145, 8);
+    
+}
+
+/* จบ navbar  */
+
+@media (max-width: 992px){
+    #cart, #user, #mail {
+        display: block;
+    }
+    .icon_cart, .icon_user, .box-noti, .icon_mail,.icon_mail2{
+        display: none;
+    }
+    .card{
+        width: 70%;
+        margin: 0% auto;
+        margin-bottom: 2em;
+    }
+   
+}
+@media (max-width: 980px){
+    .navbar-nav {
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+   
+}

@@ -1,0 +1,252 @@
+* {
+    font-family: "Prompt", sans-serif !important;
+
+}
+body {
+    background-color: white;
+}
+
+.row-allpd {
+    margin-bottom: 2em;
+    margin-top: 100px;
+}
+.card_index{
+    margin:auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.card{
+    margin-top: 70px;
+    width: 100%;
+    margin: auto;
+    transition: 0.5s; 
+}
+
+.img-slide {
+    height: 80vh;
+    object-fit: cover;
+    border: none !important;
+}
+
+.detail {
+    border-bottom: 1px solid lightgray;
+}
+.detail-litle {
+    width: 80%;
+    margin: auto;
+}
+.detail-litle2 {
+    margin-top: 20px !important;
+    width: 80%;
+    margin: auto;
+    font-size: 18px;
+}
+.pd-time::after {
+    content: "(เวลาในการจัดส่งหรือรับสินค้าจะยึดตามสินค้าที่ใช้เวลาเตรียมนานสุด)";
+    color: #7e7b7d;
+}
+.shipping {
+    color: #08be91;
+}
+.pickup {
+    color: #ddb70c;
+}
+.shipping::after,.pickup::after {
+    content: "(กรณีในรายการสั่งซื้อของลูกค้ามีสินค้าที่ไม่ร่วมการจัดส่ง จะสามารถรับที่ร้านได้อย่างเดียว)";
+    color: #7e7b7d;
+}
+
+.pd-name{
+    font-size: 50px;
+    color: #F25287;
+    padding: 0;
+    font-weight:500;
+
+}
+.pd-des {
+    color: #363636;
+    text-indent: 50px;
+    font-size: 20px;
+}
+.btn-add {
+    margin-top: 30px !important;
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+.form1 {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+text-align: center;
+border: 1px solid rgb(155, 153, 153);
+}
+.btn-de,.btn-num,.btn-pl {
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    color: #5e5c5c;
+    background-color: white;
+}
+.btn-de,.btn-pl {
+    font-size: 40px;
+}
+.btn-addpd {
+    background-color: #F25287;
+    color: white;
+    border: 2px solid #F25287;
+    border-radius: 0px 10px 10px 0px;
+    transition: 0.3s ease-in-out;
+}
+.btn-addpd:hover {
+    background-color: white;
+    color: #F25287;
+}
+
+.pd-etc {
+    font-size: 30px;
+    width: 90%;
+    margin: auto;
+}
+.pd-ot {
+    margin-top: 50px !important;
+    width: 90% ;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.card_index2{
+    border-radius: 15px !important;
+    display: inline-block;
+    width:90%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    background-color: #f7ecec00;
+    backdrop-filter: blur(10px);
+    border: 0px;
+    transition: 0.4s; 
+    
+}
+
+.card-text-name {
+    padding: 0;
+    margin-top: 0.5em !important;
+    color: rgb(71, 71, 71);
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 90%;
+    margin: auto;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+}
+.card-text-price {
+    padding: 0;
+    /* margin-top: 0.5em !important; */
+    color: rgb(136, 134, 134);
+    font-size: 1em;
+    font-weight: bold;
+    width: 90%;
+    margin: auto; 
+}
+.p-text-detail {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.card-text-deli {
+    padding: 0;
+    /* margin-top: 0.5em !important; */
+    color: rgb(4, 163, 142);
+    font-size: 1em;
+    font-weight: bold;
+    width: 90%;
+    margin: auto; 
+}
+.card-text-pic {
+    padding: 0;
+    /* margin-top: 0.5em !important; */
+    color: rgb(226, 152, 15);
+    font-size: 1em;
+    font-weight: bold;
+    width: 90%;
+    margin: auto; 
+}
+.card-img-top2{
+    object-fit: cover;
+    width: 90%;
+    display: block;
+    margin: auto;
+    height: 16em;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+@media screen and (max-width: 1024px) {
+    .detail-litle, .detail-litle2{
+        width: 90%;
+    }
+    .btn-add {
+        width: 90%;
+    }
+    .img-slide {
+        height: 50vh;
+    }
+}
+@media screen and (max-width: 850px) {
+    .card_index{
+        grid-template-columns:1fr;
+    }
+    .card{
+        margin-top: 0px; 
+    }
+    .row-allpd {
+        margin-bottom: 70px;
+    }
+    .pd-ot {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 600px) {
+    .card-img-top2{
+        height: 13em;
+    }
+    .p-text-detail {
+    margin-top: 10px;
+    }
+    .card-text-deli {
+        font-size: 16px;
+    }
+    .card-text-pic {
+        font-size: 16px;
+
+    }
+}
+@media screen and (max-width: 450px) {
+    .pd-ot {
+        grid-template-columns: 1fr;
+    }
+    .card-img-top2{
+        height: 15em;
+    }
+    .card_index2{
+        width:100%;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 70px;
+    }
+    .card-text-name {
+        font-size: 20px;
+    }
+
+    .card-text-price {
+            font-size: 20px;
+        }
+    .card-text-pic, .card-text-deli{
+            font-size: 20px;
+    
+        }
+}

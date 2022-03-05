@@ -1,0 +1,151 @@
+*{
+    font-family: 'Prompt', sans-serif;
+}
+#page-top{
+    background-color: #fcfcfc;
+}
+.fullscreen {
+    /* สูงเท่ากับความสูงของหน้าจอ */
+    height: 70vh;
+    /* ทำให้ .left, .center และ .right ต่อกันเป็นแนวนอน */
+    display: flex;
+  }
+
+  .left,
+  .center,
+  .right {
+    box-sizing: border-box;
+    padding: 16px;
+  }
+
+  .left {
+    width: 15%;
+  }
+  #row_profile{
+      margin-left: 7px;
+      margin-bottom: 1em;
+  }
+  
+  .center {
+    background-color:whitesmoke;
+    width: 78%;
+    margin-left: 21%;
+    border-radius: 5px;
+    margin-top: 1em;
+    height: 47em;
+    box-shadow: 10px 10px 10px rgb(211, 214, 211) ;
+  }
+
+  .bar{
+      width: 100%;
+      height: 15em;
+      z-index: -10;
+  }
+  .welcome{
+      float: right;
+      margin-right: 2em;
+      color: white;
+  }
+.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    padding-top: 20px;
+    box-shadow: #b9b8b8 2px 10px 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #474545;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  #fullscreen{
+      height: 100vh;
+  }
+
+  .content1 {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr ;
+    margin-bottom: 5px;
+  }
+  .content2 {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .chart-piroid {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    
+  }
+
+@media (max-width: 1180px){
+  .username ,.mailji,img.img_profile{
+    display: none;
+  }
+  .sidenav{
+    width: 11%;
+    padding-top: 0.1em;
+  }
+  .bi-graph-up,
+  .bi-ui-checks-grid,
+  .bi-basket-fill,
+  .bi-clipboard-data,
+  .bi-cash-coin,
+  .bi-star,
+  .bi-people-fill,
+  .bi-shop-window,
+  .bi-clipboard-data,
+  .bi-chat-square-text-fill,
+  .bi-chat-text-fill {
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+  }
+  .menu{
+    text-align: center;
+  }
+  .dpn{
+    display: none;
+  }
+  a.menu, a.menu-active{
+    width: 5em !important;
+    margin-right: 5px;
+  }
+   .sidenav a{
+     padding: 10px 16px  6px 16px;
+   }
+   a.btn_logout{
+     font-size: 0.8em !important ;
+     font-weight: bold;
+     width: 90% !important ;
+   }
+   /* ... */
+
+   .center{
+     width:87%;
+     margin-left: 12%;
+     height: 49em;
+   }
+
+}
+
+
+  
+

@@ -1,0 +1,249 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css");
+*{
+    font-family: 'Prompt', sans-serif !important;
+}
+body {
+    background-color: whitesmoke;
+}
+.card-login {
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgb(211, 211, 211);
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+.left {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    background: rgb(255,255,255);
+    background: linear-gradient(346deg, rgba(255,255,255,1) 0%, rgb(255, 240, 199) 66%);
+}
+.sub-input {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+.input-sub {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.box-content {
+    width: 70%;
+    margin: auto;
+    margin-top: 25%;
+}
+.box-content2 {
+    width: 90%;
+    margin: auto;
+    margin-top: 5%;
+}
+.form-input {
+    height: 32em ;
+    overflow: scroll;
+}
+.form-input::-webkit-scrollbar {
+    display: none;
+}
+.img-login {
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+.hello-text {
+    font-size: 3em;
+    letter-spacing: 3px;
+    color: rgb(161, 115, 77);
+    font-weight: bold;
+    text-align: center;
+}
+.hello-text2 {
+    font-size: 2.5em;
+    letter-spacing: 3px;
+    color: rgb(161, 115, 77);
+    font-weight: bold;
+    text-align: center;
+}
+.img-login {
+    display: block;
+    margin: auto;
+    width: 60%;
+    margin-bottom: 1em;
+}
+.descript-text {
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.forgot-pass {
+    text-align: right;
+    transition: .3s;
+    color: rgb(161, 115, 77);
+}
+.forgot-pass:hover {
+    color: rgb(173, 80, 4);
+}
+.btn-signin {
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+    width: 10em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border: 2px solid rgb(161, 115, 77);
+    background-color: rgba(255, 78, 146, 0);
+    border-radius: 15px;
+    letter-spacing: 2px;
+    transition: .3s;
+    color: rgb(161, 115, 77);
+    text-align: center;
+    font-weight: 700;   
+    margin-bottom: 1em;
+}
+.nonenone {
+    display: none !important;
+}
+.btn-signin:hover {
+    color: rgb(161, 115, 77);
+    letter-spacing: 3px;
+    text-decoration: none;
+    
+}
+.btn-visit {
+    display: block;
+    margin: auto;
+    text-decoration: none;
+    width: 10em;
+    letter-spacing: 1px;
+    transition: .3s;
+    color: rgb(161, 115, 77);
+    text-align: center;
+}
+.btn-visit:hover {
+    color: rgb(160, 76, 7);
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+.btn-signup {
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+    width: 10em;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border:0;
+    background-color: rgb(161, 115, 77);
+    border-radius: 15px;
+    letter-spacing: 2px;
+    transition: .2s;
+    color: white;
+    text-align: center;
+    font-weight: 700;   
+}
+.btn-signup:hover {
+    letter-spacing: 3px;
+}
+.form-signin {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+.form-login {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid rgb(209, 209, 209);
+    outline: none;
+}
+
+.sub-input label::after {
+    content: "*";
+    color: rgb(160, 76, 7);
+}
+
+.btnn {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgb(160, 76, 7);
+    transition: .2s;
+}
+.btnn:checked {
+    border: 2px solid white;
+    outline: 2px solid rgb(160, 76, 7);
+    background-color: rgb(160, 76, 7);
+}
+
+
+
+@media (max-width:1370px){
+
+    .card-login {
+        height: 40em;
+    }
+    .hello-text {
+        font-size: 2em;
+
+    }
+}
+@media (max-width:1024px){
+
+    .card-login {
+        height: 40em;
+    }
+    .hello-text {
+        font-size: 2em;
+
+    }
+}
+
+@media (max-width:900px){
+
+    .card-login {
+        height: 40em;
+    }
+    .hello-text {
+        font-size: 2em;
+    }
+    .hello-text {
+        font-size: 1.5em;
+    }
+    .descript-text {
+        font-size: 0.8em;
+    }
+}
+@media (max-width:600px){
+
+    .card-login {
+        width: 90%;
+        grid-template-columns:1.5fr;
+        height: 40em;
+    }
+    .left {
+        display: none;
+    }
+    .nonenone {
+        display: block !important;
+    }
+    .box-content2 {
+        width: 80%;
+
+    }
+}
+@media (max-width:500px){
+    .sub-input {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+}
+
+

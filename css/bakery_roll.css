@@ -1,0 +1,29 @@
+.breadcrumb{
+    margin-top: 5%;
+    padding-left: 7%;
+    margin-bottom: 0%;
+}
+a{
+    color: #041e57;
+}
+a:link{
+    text-decoration: none;
+    font-weight: underline; 
+}
+a:hover {
+    color: #214753;
+}
+.card{
+    margin-bottom: -2%;
+    margin-top: 2em;
+    transition: 0.5s;   
+    border-radius: 15px;
+    background-color: #ffc3c3;
+}
+.card:hover{
+    box-shadow: 5px 5px 5px lightgray;
+}
+.card-img-top{
+    padding: 10px;
+    border-radius: 15px;
+}

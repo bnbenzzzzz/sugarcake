@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+
+* {
+    font-family: 'Prompt', sans-serif;
+}
+
+h4 {
+    font-family: 'Prompt', sans-serif;
+    margin-bottom: 1em;
+    font-weight: 300;
+}
+
+.sub-menu {
+    display: block;
+    float: left;
+    margin-left: 4em;
+    line-height: 3em;
+}
+
+.detail_user,
+.detail_address {
+    font-size: 1.1em;
+    color: black;
+    padding-left: 1.3em;
+    text-decoration: none;
+}
+
+.bi-person,
+.bi-archive {
+    font-size: 1.5rem;
+}
+
+.head_form {
+    font-size: 1.5em;
+}
+
+form {
+    width: 30%;
+    display: block;
+    margin: auto;
+    margin-top: 8%;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+.modal-input {
+    width: 80% !important;
+    margin-top: 10%;
+}
+
+.modal-footer {
+    display: block;
+    margin: auto;
+}
+
+.modal-btn-footer {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5em;
+}
+
+.btn-yl {
+    width: 10em;
+    background-color: rgb(235, 47, 88);
+    box-shadow: 5px 5px 1px rgb(247, 127, 153);
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    margin: auto;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.btn-bt {
+    display: inline-block;
+    margin: auto;
+    width: 10em;
+    background-color: rgb(17, 183, 212);
+    box-shadow: 5px 5px 1px rgb(95, 222, 245);
+    color: white;
+    font-weight: bold;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.btn-yl:hover,
+.btn-bt:hover {
+    letter-spacing: 3px;
+    color: white;
+}

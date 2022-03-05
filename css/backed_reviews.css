@@ -1,0 +1,461 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css");
+*{
+    font-family: 'Prompt', sans-serif !important;
+}
+::-webkit-scrollbar {
+  display: none;
+} 
+
+  
+  .remain{
+    color: #d40b47;
+    font-weight: bold;
+    font-size: 20px;
+    float: right;
+  }
+  
+  .modal-footer {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  }
+  .modal-footer a{
+  text-decoration: none;
+  }
+  
+  .btn-accept {
+  width: 100%;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  border: 0px;
+  background-color: #47B5A2;
+  padding: 10px 10px;
+  }
+  
+  .btn-cancel {
+  width: 100%;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  border: 0px;
+  background-color: #E0E3ED;
+  padding: 10px 10px;
+  }
+  a.btn-cancel:hover{
+    background-color: #2c3147;
+  }
+  
+  .close{
+  border: 1px solid rgba(192, 185, 185, 0);
+  background-color: rgba(192, 185, 185, 0);
+  padding: 0px 0px !important;
+  width: 40px;
+  border-radius: 5px;
+  color: #474545;
+  font-size: 50px;
+  }
+#modaldel{
+padding: 0% !important;
+}
+
+/* __________ */
+
+.filter{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 7px;;
+ background-color: white;
+  width: 95%;
+  border-radius: 5px;
+  margin: auto !important;
+  margin-top: 1em !important;
+  padding: .5em;
+}
+.pd-0 {
+  margin-top: 1.5em !important;
+}
+
+
+.form-control{
+  border-radius: 5px;
+}
+.dateS{
+  width: 100%;
+}
+.dateStr{
+    align-items: center;
+
+}
+
+.col-8.date-inline{
+ display: grid;
+ grid-template-columns: 1fr 2fr .5fr 2fr;
+ text-align: center;
+ /* display: flex; */
+
+}
+.date-inline input{
+  padding-left: 10px;
+}
+
+.date-inline{
+  display: flex;
+  vertical-align: middle;
+}
+.inputstart{
+  border:solid 1px #000000;
+}
+
+
+
+/* __________ */
+
+.fullscreen {
+    /* สูงเท่ากับความสูงของหน้าจอ */
+    height: 70vh;
+    /* ทำให้ .left, .center และ .right ต่อกันเป็นแนวนอน */
+    display: flex;
+  }
+
+  .left,
+  .center,
+  .right {
+    box-sizing: border-box;
+   
+  }
+  .img-user {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+  }
+  .left {
+    width: 25%;
+  }
+  #row_profile{
+      margin-left: 7px;
+      margin-bottom: 1em;
+  }
+
+
+  .center {
+    background-color: #F7F7F7;
+    width: 100%;
+    margin-left: 20%;
+    height: 50em;
+    /* ถ้าข้อมูลมันเยอะจนล้นตามแนวแกน y ให้มัน scroll */
+    overflow: scroll;
+  }
+
+
+  .bar{
+      width:100%; 
+      z-index: -10;
+      font-size: 16px;
+    background-clip: content-box;
+  }
+ 
+ h2 {
+  padding: 0.5em 1em;
+  margin: auto;
+  float: left;
+  display: block;
+ }
+.date{
+  width: 13%;
+}
+
+/* table */
+
+table {
+  margin: 0;
+}
+
+.table1 {
+  border-collapse: collapse;
+  overflow: visible;
+}
+
+.table1 thead th {
+  font-size: 14px;
+  color: #555;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 600;
+  vertical-align: top;
+  padding: 15px 40px;
+  padding-right: 10px;
+}
+
+.table1 tbody td {
+  font-size: 14px;
+  color: #808080;
+  vertical-align: middle;
+  padding: 25px 40px;
+  border: none;
+  padding-right: 10px;
+}
+.table1 .space {
+  height: 5px;
+  background: transparent;
+}
+
+#table {
+  width: 95%;
+  margin: auto;
+  display: table;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: grey;
+  /* background-color: white; 
+  box-shadow: 2px 2px 5px rgb(230, 230, 230);
+  border-radius: 10px;*/
+}
+
+.tr-shadow {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
+  background-color: white;
+}
+
+/* .table1 tbody tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}  */
+
+td,
+th {
+  padding: 2% 1%;
+}
+.rate-bi {
+  color: #ff1b72 !important;
+  padding-top: 10px;
+  width: 12%;
+}
+p.show,p.hide{
+  margin:0;
+}
+.btn-review-delete {
+  display: block;
+  /* width: 4em ; */
+  margin:auto;
+  color: rgb(206, 40, 40);
+}
+.btn-review-delete:hover {
+  color: rgb(185, 40, 40);
+}
+.btn-review-show {
+  padding: 5px 10px;
+  background-color: rgb(9, 139, 100);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  display:block;
+  margin: auto;
+  text-align: center;
+}
+.btn-review-show:hover {
+  color: white;
+  background-color: rgb(9, 122, 89);
+}
+.btn-review-hide {
+  padding: 5px 10px;
+  background-color: rgb(224, 175, 11);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  display:block;
+  margin: auto;
+  text-align: center;
+}
+.btn-review-hide:hover {
+  color: white;
+  background-color: rgb(204, 161, 19);
+}
+.sidenav {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#fff;
+  overflow-x: hidden;
+  padding-top: 20px;
+  /* box-shadow: #b9b8b8 2px 10px 20px; */
+  }
+  
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #474545;
+  display: block;
+  transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #898f92;
+  }
+  #fullscreen{
+      height: 100vh;
+  }
+  
+
+ #row_cat{
+  background-color: #fcf8f8;
+  padding: 0.8em;
+  margin: 0% auto;
+  margin-top: 2em;
+  width: 90%;
+  height: 7em;
+  border-radius: 10px !important;
+  border: 3px solid rgb(43, 204, 115);
+  box-shadow: 5px 5px 10px rgb(211, 211, 211);
+}
+
+.contactshow {
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+
+
+.btn-delete-pd {
+  background-color: rgb(173, 43, 43);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+.btn-delete-pd:hover {
+  color: white;
+  background-color: rgb(158, 41, 41);
+}
+.btn-delete-can {
+  background-color: rgb(151, 151, 151);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+.btn-delete-can:hover {
+  color: white;
+  background-color: rgb(126, 123, 123);
+}
+.sidenav {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:#fff;
+  overflow-x: hidden;
+  padding-top: 20px;
+  box-shadow: #b9b8b8 2px 10px 20px;
+}
+
+.pagination{
+  margin: 3rem;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+@media (max-width: 1180px){
+  .username ,.mailji,img.img_profile{
+    display: none;
+  }
+  .sidenav{
+    width: 11%;
+    padding-top: 0.1em;
+  }
+  .bi-graph-up,
+  .bi-ui-checks-grid,
+  .bi-basket-fill,
+  .bi-clipboard-data,
+  .bi-cash-coin,
+  .bi-star,
+  .bi-people-fill,
+  .bi-shop-window,
+  .bi-clipboard-data,
+  .bi-chat-square-text-fill,
+  .bi-chat-text-fill {
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+  }
+  .menu{
+    text-align: center;
+  }
+  .dpn{
+    display: none;
+  }
+  a.menu, a.menu-active{
+    width: 5em !important;
+    margin-right: 0;
+   
+  }
+   .sidenav a{
+     padding: 10px 16px  6px 16px;
+   }
+   a.btn_logout{
+     font-size: 0.8em !important;
+     font-weight: bold;
+     width: 90% !important;
+     }
+     .center {
+      margin-left: 12%;
+      width: 87%;
+      height:50em !important;
+      margin-top:1%;
+      border-radius: 10px;
+      box-shadow:5px 5px 10px rgb(211 214 211);
+      overflow-y: scroll;
+      background-color: rgb(252, 249, 249);
+
+     }
+   
+     .date{
+       width: 12%;
+     }
+     .cus{
+       width: 10%;
+     }
+     .rate-bi{
+       width: 14%;
+     }
+     .p-comcom{
+       width: 35%;
+     }
+     .show,.hide{
+       display: none;
+     }
+     .btn-review-show ,.btn-review-hide{
+       padding:10px ;
+      margin-right: -5%;
+       display: inline;
+     }
+     .eye{
+       width: 6%;
+     }
+     .td-delete{
+      text-align: center;
+     }
+
+    }
+
+
+
+
+
+
+

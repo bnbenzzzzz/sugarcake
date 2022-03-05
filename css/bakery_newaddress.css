@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(173, 156, 106);
+    position: absolute;
+    margin-top: 5em;
+}
+
+.text_title {
+    font-family: 'Kanit', sans-serif !important;
+    font-size: 3em;
+    color: #F25287;
+    margin-top: 2em !important;
+    margin-bottom: 3%;
+    text-align: center;
+    margin: auto;
+}
+
+.text1 {
+    padding: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.box-right {
+    width: 60%;
+}
+
+.box-form2 {
+    margin-right: 25%;
+}
+
+.table1 {
+    margin-top: 2em;
+}
+
+table td {
+    width: 20em;
+    line-height: 40px;
+    font-size: 1.3em;
+}
+
+.td1 {
+    font-weight: 600;
+    margin: 0;
+}
+
+#td1 {
+    font-weight: 600;
+    margin: 0;
+}
+
+.label-file {
+    display: inline-block;
+    background-color: palevioletred;
+    box-shadow: 5px 5px 1px rgb(243, 211, 211);
+    color: white;
+    height: 2em;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.label-file:hover {
+    background-color: rgb(172, 91, 118);
+}
+
+.text_title2 {
+    font-weight: bold;
+    cursor: pointer;
+    width: 9em;
+    color: white;
+    padding: 5px;
+    border: 0px;
+    border-radius: 7px;
+    box-shadow: rgb(245, 173, 239) 5px 5px 1px;
+    display: block;
+    text-align: center;
+    margin: 0% auto;
+    margin-top: 4em;
+    margin-bottom: 3%;
+    background-color: rgb(196, 93, 182);
+}
+
+p #total {
+    display: none;
+}
+
+.checkout {
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+    border: 0px;
+    background-color: rgb(41, 173, 190);
+    color: white !important;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 5px 5px rgb(218, 216, 216);
+    transition: 0.2s;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.address {
+    margin-top: 2em !important;
+    padding: 2em;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgb(255, 249, 249);
+    box-shadow: 3px 3px 10px rgb(235, 234, 234);
+}
+
+.p-des {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    padding: 10px;
+    background-color: rgb(240, 136, 171);
+    border-radius: 10px;
+}
+
+.btn_add {
+    color: white;
+    background-color: #548CFF;
+    border-radius: 20px;
+    padding: 10px 20px 10px 15px;
+    margin: auto;
+    text-decoration: none;
+
+}
+
+.number{
+    /* background-color: #B3541E; */
+    /* color: white; */
+    border-radius: 50%;
+    padding: 10px;
+    margin-top: 2em;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+}
+.column1 {
+    float: right;
+    /* width: 20%; */
+    color: rgb(109, 107, 107);
+    text-align: right;
+    padding-right: 2em;
+    /* margin-top:1em; */
+    line-height: 2;
+    }
+
+.a {
+    line-height: 2;
+}
+
+.column2 {
+        float: left;
+      
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.row{
+    /* border-bottom: 2px solid #EFEFEF ; */
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: .6fr 1fr 2fr 1fr 1fr; 
+}
+
+.pickup{
+    font-size:16px ;
+    font-style: italic;
+    color: rgb(235, 107, 149);
+    /* background-color: rgb(243, 217, 225); */
+}
+
+.btn_edit {
+    color: white;
+    background-color: #F07B3F;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: auto;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    margin: auto;
+    transition: 0.3;
+    text-align: center;
+    margin-top: 5em;
+
+}
+
+.btn_del {
+    color: white;
+    background-color: #D83A56;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: auto;
+    text-decoration: none;
+   width: 100%;
+    display: block;
+    margin: auto;
+    transition: 0.3;
+    text-align: center;
+    margin-top: 5em;
+}
+
+.btm {
+    width: 100% !important;
+    margin: 1.5em 0;
+
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+
+/* modal */
+
+.modal-content {
+    width: 50%;
+    margin-top: 5em !important;
+    margin: 0 auto;
+    border-top: #F07B3F solid 15px;
+}
+
+.modal-body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+button.btn-cancel {
+    border: 2px solid rgb(148, 148, 148);
+    border-radius: 8px;
+    background-color: rgb(148, 148, 148);
+    color: whitesmoke;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.update-address {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.head-edit {
+    padding: .3em 0;
+    font-size: 3em;
+    color: #B3541E;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-head {
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+button.btn-submit {
+    /* margin: auto; */
+    border: 2px solid rgb(0, 162, 255);
+    border-radius: 8px;
+    background-color: rgb(0, 162, 255);
+    color: whitesmoke;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+button.btn-cancel {
+    border: 2px solid rgb(148, 148, 148);
+    border-radius: 8px;
+    background-color: rgb(148, 148, 148);
+    color: whitesmoke;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+
+}
+
+.bd-bottom {
+    margin: 2rem 0;
+}
+
+.modal-btn-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    width: 80% !important;
+    gap: 3em;
+}
+
+.delete_sure {
+    text-align: center;
+    color: rgb(160, 7, 7);
+    padding-top: 1em;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.non-default{
+color: rgb(148, 148, 148);
+background-color: white;
+border: 2px solid rgb(148, 148, 148);
+text-decoration: none;
+border-radius: 8px;
+padding: 5px 10px;
+
+
+
+}
+.default{
+color: white;
+background-color: #34BE82;
+text-decoration: none;
+border-radius: 8px;
+padding: 5px 10px;
+width: 100%;
+margin-bottom: 3em;
+
+}

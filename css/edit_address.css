@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+* {
+    font-family: 'Prompt', sans-serif;
+}
+
+h4 {
+    font-family: 'Prompt', sans-serif;
+    margin-bottom: 1em;
+    font-weight: 300;
+}
+
+.sub-menu {
+    display: block;
+    float: left;
+    margin-left: 4em;
+    line-height: 3em;
+}
+
+.detail_user,
+.detail_address {
+    font-size: 1.1em;
+    color: black;
+    padding-left: 1.3em;
+    text-decoration: none;
+}
+
+.bi-person,
+.bi-archive {
+    font-size: 1.5rem;
+}
+
+.head_form {
+    font-size: 1.5em;
+}
+form {
+    width: 30%;
+    display: block;
+    margin: auto;
+    margin-top: 8%;
+}
+.btn_add {
+    color: white;
+    background-color: #548CFF;
+    border-radius: 20px;
+    padding: 10px 20px 10px 15px;
+    margin: auto;
+    text-decoration: none;
+
+}
+
+.column1 {
+    float: right;
+    /* width: 20%; */
+    color: rgb(109, 107, 107);
+    text-align: right;
+    padding-right: 2em;
+    /* margin-top:1em; */
+    line-height: 2;
+    }
+
+.a {
+    line-height: 2;
+}
+
+.column2 {
+        float: left;
+      
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.row{
+    /* border-bottom: 2px solid #EFEFEF ; */
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: .6fr 1fr 2fr 1fr 1fr; 
+}
+
+.pickup{
+    font-size:16px ;
+    font-style: italic;
+    color: rgb(235, 107, 149);
+    /* background-color: rgb(243, 217, 225); */
+}
+
+.btn_edit {
+    color: white;
+    background-color: #F07B3F;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: auto;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    margin: auto;
+    transition: 0.3;
+    text-align: center;
+
+}
+
+.btn_del {
+    color: white;
+    background-color: #D83A56;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: auto;
+    text-decoration: none;
+   width: 100%;
+    display: block;
+    margin: auto;
+    transition: 0.3;
+    text-align: center;
+}

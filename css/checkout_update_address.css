@@ -1,0 +1,61 @@
+#myModalLabel{
+    font-weight: bold;
+    margin: auto;
+    display: block;
+}
+
+.modal-content{
+    border: 0px solid !important;
+    border-top: 15px solid #A1CAE2 !important;
+    width: 100%;
+    margin-top: 10% !important;
+    margin: auto;
+    border-radius: 10px !important;
+}
+#submit{
+    font-weight: bold;
+    color: white;
+    box-shadow: 5px 5px 1px #CAF7E3;
+}
+#reset{
+    font-weight: bold;
+    color: white;
+    box-shadow: 5px 5px 1px #F4D9C6;
+}
+/* .update1{
+    border: solid #FFD5E5 2px;
+}
+.update2{
+    border: solid #FFEECC 2px;
+}
+.update3{
+    border: solid #BEEBE9 2px;
+}
+.update4{
+    border: solid #C7F3FF 2px;
+} */
+
+#submit:hover{
+    background-color: #98ACF8;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+#reset:hover{
+    background-color: #DF7861;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.btn-primary {
+    float: right;
+    margin-right: 8%;
+    background-color: #75CFB8!important;
+    border: 0px !important;
+    margin-bottom:1em ;
+}
+.btn-light {
+    float: right;
+    margin-right: 8%;
+    background-color: #DF7861 !important;
+    border: 0px !important;
+    margin-bottom:1em ;
+}
