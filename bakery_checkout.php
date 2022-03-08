@@ -219,10 +219,10 @@ include "./function/getNumOfCart.php";
                             $numPickup = mysqli_num_rows($resultCheckPickup);
                             $Hdate = 0;
                             $date = date('Y-m-d');
-                            while($CheckDate = mysqli_fetch_array($resultCheckdate)){
-                                if($CheckDate['pd_time']>$Hdate){
+                            while ($CheckDate = mysqli_fetch_array($resultCheckdate)) {
+                                if ($CheckDate['pd_time'] > $Hdate) {
                                     $Hdate += $CheckDate['pd_time'];
-                                }else{
+                                } else {
                                     $Hdate = $Hdate;
                                 }
                             }
@@ -234,7 +234,7 @@ include "./function/getNumOfCart.php";
                 <article class="select-take" id="show-take">
                     <p class="p-des">รบกวนเลือกวันและเวลาที่จะเข้ามารับสินค้า </p>
                     <article class="input-date">
-                        <input type="date" name="date-get" min="<?php echo date('Y-m-d', strtotime("+$Hdate day", strtotime($date))); ?>" >
+                        <input type="date" name="date-get" min="<?php echo date('Y-m-d', strtotime("+$Hdate day", strtotime($date))); ?>">
                         <!-- <input type="time" name="time-get" min="08:00" max="17:00" id=""> -->
                         <section class="box">
                             <select name="time-get" id="time-get">
@@ -252,16 +252,27 @@ include "./function/getNumOfCart.php";
                     <article class="input-address">
                         <?php
                         $user_username = $_SESSION['user_username'];
-                        $queryUser = "SELECT * FROM user  WHERE user.user_username='$user_username'  ";
-                        $resultUser = mysqli_query($conn, $queryUser);
-                        $rowUser = mysqli_fetch_array($resultUser);
+                        $queryadddress = "SELECT * FROM user JOIN address_tbl on user.user_username = address_tbl.user_username WHERE user.user_username = '$user_username' ";
+                        $resultaddress = mysqli_query($conn, $queryadddress);
+                        
+                        // $user_username = $_SESSION['user_username'];
+                        // $queryUser = "SELECT * FROM user  WHERE user.user_username='$user_username'  ";
+                        // $resultUser = mysqli_query($conn, $queryUser);
+                        // $rowUser = mysqli_fetch_array($resultUser);
 
-                        $queryAddress = "SELECT * FROM address_tbl WHERE user_username='$user_username' AND address_type = 1  ";
-                        $resultAddress = mysqli_query($conn, $queryAddress);
-                        $rowAddress = mysqli_fetch_array($resultAddress);
+                        // $queryAddress = "SELECT * FROM address_tbl WHERE user_username='$user_username' AND address_type = 1  ";
+                        // $resultAddress = mysqli_query($conn, $queryAddress);
+                        // $rowAddress = mysqli_fetch_array($resultAddress);
                         ?>
+
+
                         <article class="show-address" id="show-address1">
+                        <div class="btn-change">
+                            <?php ?>
+                                <a href="bakery_newaddress.php" class="btn btn-change-address">เปลี่ยน</a>
+                            </div>
                             <input style="display: none;" type="text" value="<?php echo $rowAddress['address_id'] ?>" name="old_address">
+                            
                             <div class="show-sub">
                                 <label>ชื่อ-นามสกุล</label><br>
                                 <label>เบอร์โทร</label><br>
@@ -280,7 +291,7 @@ include "./function/getNumOfCart.php";
                             <div class="show-address1">
                                 <label><?php echo $rowUser['user_fname'] . ' ' . $rowUser['user_lname'] ?></label><br>
                                 <label><?php echo $rowUser['user_tel'] ?></label>
-<br>
+                                <br>
                                 <label><?php echo $rowAddress['address_descript'] ?>
                                     <?php
                                     while ($rowDistricts = mysqli_fetch_assoc($resultDistricts)) {
@@ -302,11 +313,11 @@ include "./function/getNumOfCart.php";
 
                                     <?php echo $rowAddress['postcode'] ?> <br>
                                 </label>
-                               </div>  
-                                    <div class="btn-change">
-                                    <a href="bakery_newaddress.php" class="btn btn-change-address">เปลี่ยน</a>
-                                    </div>
-                           
+                            </div>
+                            <div class="btn-change">
+                                <a href="bakery_newaddress.php" class="btn btn-change-address">เปลี่ยน</a>
+                            </div>
+
                         </article>
 
 

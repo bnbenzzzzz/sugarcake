@@ -104,7 +104,6 @@ include "./function/getNumOfCart.php";
         $user_username = $_SESSION['user_username'];
         $queryadddress = "SELECT * FROM user JOIN address_tbl on user.user_username = address_tbl.user_username WHERE user.user_username = '$user_username' ";
         $resultnewaddress = mysqli_query($conn, $queryadddress);
-        
         ?>
 
         <section class="content">

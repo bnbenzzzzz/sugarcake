@@ -19,5 +19,5 @@ $user_status = 1;
 // mysqli_query($conn,"UPDATE user SET  where user_username='$user_username'");	
 mysqli_query($conn,"UPDATE address_tbl SET address_descript='$sub_add', province='$province_id',district ='$amphure_id', sub_district = '$district_id', postcode='$postcode',fname='$user_fname', lname='$user_lname',tel ='$user_tel' where address_id='$address_id'");	
 
-header('location:../bakery_newaddress.php');
+// header('location:../bakery_newaddress.php');
  ?>
